@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>給柏翰的生日禮物</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     OPENING
+========================================= -->
+
+<section class="opening" id="opening">
+
+    <div class="opening-content">
+
+        <h1>柏翰</h1>
+
+        <p class="opening-text">
+            今天是你的特別日子 :&gt;
+        </p>
+
+        <p class="gift-text">
+            我偷偷準備了一個小禮物給你~
+        </p>
+
+        <button
+            class="start-button"
+            onclick="startBirthday()"
+        >
+            START
+        </button>
+
+        <p class="click-text">
+            點開看看吧 ♡
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     BIRTHDAY
+========================================= -->
+
+<section
+    class="birthday"
+    id="birthday"
+>
+
+    <div class="birthday-content">
+
+        <h2>
+            Happy Birthday ❤️
+        </h2>
+
+
+        <!-- CAKE -->
+
+        <div
+            class="cake-scene"
+            id="cakeScene"
+        >
+
+            <span class="sparkle s1">✦</span>
+
+            <span class="sparkle s2">✧</span>
+
+            <span class="sparkle s3">✦</span>
+
+            <span class="sparkle s4">✧</span>
+
+
+            <svg
+                class="cake-svg"
+                viewBox="0 0 600 520"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+
+                <defs>
+
+                    <linearGradient
+                        id="cakeGradient"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#315b80"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#172d47"
+                        />
+
+                    </linearGradient>
+
+
+                    <linearGradient
+                        id="creamGradient"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#ffffff"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#dce8ef"
+                        />
+
+                    </linearGradient>
+
+
+                    <linearGradient
+                        id="blueCream"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#78b9df"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#356f9d"
+                        />
+
+                    </linearGradient>
+
+
+                    <linearGradient
+                        id="candleGradient"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#ffffff"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#a9d4ec"
+                        />
+
+                    </linearGradient>
+
+
+                    <linearGradient
+                        id="flameGradient"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1"
+                    >
+
+                        <stop
+                            offset="0%"
+                            stop-color="#fff6a8"
+                        />
+
+                        <stop
+                            offset="55%"
+                            stop-color="#ffb347"
+                        />
+
+                        <stop
+                            offset="100%"
+                            stop-color="#e56b3f"
+                        />
+
+                    </linearGradient>
+
+
+                    <filter id="glow">
+
+                        <feGaussianBlur
+                            stdDeviation="5"
+                            result="blur"
+                        />
+
+                        <feMerge>
+
+                            <feMergeNode in="blur"/>
+
+                            <feMergeNode in="SourceGraphic"/>
+
+                        </feMerge>
+
+                    </filter>
+
+                </defs>
+
+
+                <!-- shadow -->
+
+                <ellipse
+                    cx="300"
+                    cy="445"
+                    rx="190"
+                    ry="25"
+                    fill="rgba(0,0,0,.22)"
+                />
+
+
+                <!-- plate -->
+
+                <ellipse
+                    cx="300"
+                    cy="420"
+                    rx="205"
+                    ry="35"
+                    fill="#e7eef3"
+                />
+
+                <ellipse
+                    cx="300"
+                    cy="410"
+                    rx="190"
+                    ry="25"
+                    fill="#ffffff"
+                />
+
+
+                <!-- cake -->
+
+                <path
+                    d="
+                        M125 310
+                        Q125 285 150 275
+                        L450 275
+                        Q475 285 475 310
+                        L475 390
+                        Q475 415 450 420
+                        L150 420
+                        Q125 415 125 390
+                        Z
+                    "
+                    fill="url(#cakeGradient)"
+                />
+
+
+                <!-- cream -->
+
+                <path
+                    d="
+                        M120 285
+                        Q140 260 165 270
+                        Q185 282 205 268
+                        Q225 255 245 270
+                        Q265 283 285 268
+                        Q305 255 325 270
+                        Q345 283 365 268
+                        Q385 255 405 270
+                        Q430 285 450 268
+                        Q470 260 480 285
+                        L475 315
+                        Q455 305 435 315
+                        Q415 325 395 312
+                        Q375 300 355 315
+                        Q335 327 315 312
+                        Q295 300 275 315
+                        Q255 327 235 312
+                        Q215 300 195 315
+                        Q175 327 155 312
+                        Q135 302 120 315
+                        Z
+                    "
+                    fill="url(#creamGradient)"
+                />
+
+
+                <!-- blue cream -->
+
+                <path
+                    d="
+                        M125 330
+                        Q300 350 475 330
+                        L475 355
+                        Q300 375 125 355
+                        Z
+                    "
+                    fill="url(#blueCream)"
+                    opacity=".9"
+                />
+
+
+                <!-- ribbon -->
+
+                <path
+                    d="
+                        M260 275
+                        L340 275
+                        L340 420
+                        L260 420
+                        Z
+                    "
+                    fill="#d94f68"
+                    opacity=".9"
+                />
+
+
+                <!-- strawberries -->
+
+                <g>
+
+                    <path
+                        d="
+                            M180 280
+                            C160 255 165 230 190 225
+                            C215 230 220 255 200 280
+                            Z
+                        "
+                        fill="#d94f68"
+                    />
+
+                    <circle
+                        cx="181"
+                        cy="248"
+                        r="2.5"
+                        fill="#fff4df"
+                    />
+
+                    <circle
+                        cx="195"
+                        cy="258"
+                        r="2.5"
+                        fill="#fff4df"
+                    />
+
+                </g>
+
+
+                <g>
+
+                    <path
+                        d="
+                            M400 280
+                            C380 255 385 230 410 225
+                            C435 230 440 255 420 280
+                            Z
+                        "
+                        fill="#d94f68"
+                    />
+
+                    <circle
+                        cx="401"
+                        cy="248"
+                        r="2.5"
+                        fill="#fff4df"
+                    />
+
+                    <circle
+                        cx="415"
+                        cy="258"
+                        r="2.5"
+                        fill="#fff4df"
+                    />
+
+                </g>
+
+
+                <!-- candles -->
+
+                <rect
+                    x="215"
+                    y="150"
+                    width="48"
+                    height="125"
+                    rx="12"
+                    fill="url(#candleGradient)"
+                />
+
+                <rect
+                    x="337"
+                    y="150"
+                    width="48"
+                    height="125"
+                    rx="12"
+                    fill="url(#candleGradient)"
+                />
+
+
+                <!-- 2 -->
+
+                <text
+                    x="239"
+                    y="235"
+                    text-anchor="middle"
+                    font-size="72"
+                    font-weight="700"
+                    fill="#315b80"
+                    font-family="Arial, sans-serif"
+                >
+                    2
+                </text>
+
+
+                <!-- 6 -->
+
+                <text
+                    x="361"
+                    y="235"
+                    text-anchor="middle"
+                    font-size="72"
+                    font-weight="700"
+                    fill="#315b80"
+                    font-family="Arial, sans-serif"
+                >
+                    6
+                </text>
+
+
+                <!-- flame 1 -->
+
+                <path
+                    class="svg-flame"
+                    id="flameOne"
+                    d="
+                        M239 145
+                        C231 136 231 126 238 117
+                        C244 110 244 102 241 93
+                        C256 104 263 118 259 130
+                        C256 139 249 145 239 145
+                        Z
+                    "
+                    fill="url(#flameGradient)"
+                    stroke="#d96d37"
+                    stroke-width="3"
+                    filter="url(#glow)"
+                />
+
+
+                <!-- flame 2 -->
+
+                <path
+                    class="svg-flame"
+                    id="flameTwo"
+                    d="
+                        M361 145
+                        C353 136 353 126 360 117
+                        C366 110 366 102 363 93
+                        C378 104 385 118 381 130
+                        C378 139 371 145 361 145
+                        Z
+                    "
+                    fill="url(#flameGradient)"
+                    stroke="#d96d37"
+                    stroke-width="3"
+                    filter="url(#glow)"
+                />
+
+
+                <!-- smoke -->
+
+                <circle
+                    class="smoke"
+                    id="smokeOne"
+                    cx="239"
+                    cy="105"
+                    r="6"
+                />
+
+                <circle
+                    class="smoke"
+                    id="smokeTwo"
+                    cx="361"
+                    cy="105"
+                    r="6"
+                />
+
+            </svg>
+
+
+            <!-- hint -->
+
+            <p
+                class="blow-hint"
+                id="blowHint"
+            >
+                點一下蛋糕，許個願吧 ✨
+            </p>
+
+
+            <!-- wish -->
+
+            <div
+                class="wish-message"
+                id="wishMessage"
+            >
+
+                <p>
+                    願你新的一歲，
+                    每一天都能開心一點。
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="birthday-message">
+
+            <p class="birthday-text">
+                生日快樂柏翰🎂:3
+            </p>
+
+
+            <audio
+                id="birthdayMusic"
+                src="birthday.mp3"
+            ></audio>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL END SCREEN
+========================================= -->
+
+<section
+    class="end-screen"
+    id="endScreen"
+>
+
+    <div class="end-content">
+
+        <div class="end-symbol">
+            ✦
+        </div>
+
+        <h3>
+            生日快樂，柏翰。
+        </h3>
+
+        <p>
+            希望你今天真的很開心 :3
+        </p>
+
+        <div class="end-heart">
+            ♥
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+const music =
+    document.getElementById("birthdayMusic");
+
+const cakeScene =
+    document.getElementById("cakeScene");
+
+const blowHint =
+    document.getElementById("blowHint");
+
+const flameOne =
+    document.getElementById("flameOne");
+
+const flameTwo =
+    document.getElementById("flameTwo");
+
+const smokeOne =
+    document.getElementById("smokeOne");
+
+const smokeTwo =
+    document.getElementById("smokeTwo");
+
+const wishMessage =
+    document.getElementById("wishMessage");
+
+const birthday =
+    document.getElementById("birthday");
+
+const endScreen =
+    document.getElementById("endScreen");
+
+
+let musicFinished = false;
+
+let candlesBlownOut = false;
+
+
+
+/* =========================================
+   START
+========================================= */
+
+function startBirthday() {
+
+    document
+        .getElementById("opening")
+        .style.display = "none";
+
+
+    birthday.style.display = "flex";
+
+
+    music.currentTime = 0;
+
+
+    music.play().catch(function(error) {
+
+        console.log(
+            "音樂播放失敗：",
+            error
+        );
+
+    });
+
+}
+
+
+
+/* =========================================
+   MUSIC FINISHED
+========================================= */
+
+music.addEventListener("ended", function() {
+
+    musicFinished = true;
+
+    blowHint.classList.add("show-hint");
+
+});
+
+
+
+/* =========================================
+   CLICK CAKE
+========================================= */
+
+cakeScene.addEventListener("click", function() {
+
+    if (!musicFinished) {
+
+        return;
+
+    }
+
+
+    if (candlesBlownOut) {
+
+        return;
+
+    }
+
+
+    candlesBlownOut = true;
+
+
+    blowHint.classList.remove("show-hint");
+
+    blowHint.classList.add("hide-hint");
+
+
+    flameOne.classList.add("blowing-out");
+
+    flameTwo.classList.add("blowing-out");
+
+
+    setTimeout(function() {
+
+        smokeOne.classList.add("smoke-rise");
+
+        smokeTwo.classList.add("smoke-rise");
+
+    }, 280);
+
+
+    setTimeout(function() {
+
+        wishMessage.classList.add("show-wish");
+
+        createConfetti();
+
+    }, 900);
+
+
+    /*
+       3.8 秒後進入真正的 END
+    */
+
+    setTimeout(function() {
+
+        birthday.classList.add("birthday-fade-out");
+
+    }, 3800);
+
+
+    /*
+       等上一個 fade 完成後，
+       顯示 END 畫面
+    */
+
+    setTimeout(function() {
+
+        birthday.style.display = "none";
+
+        endScreen.classList.add("show-end");
+
+    }, 4800);
+
+});
+
+
+
+/* =========================================
+   CONFETTI
+========================================= */
+
+function createConfetti() {
+
+    for (
+        let i = 0;
+        i < 45;
+        i++
+    ) {
+
+        const confetti =
+            document.createElement("span");
+
+
+        confetti.className =
+            "confetti";
+
+
+        const symbols = [
+            "✦",
+            "✧",
+            "•",
+            "♥"
+        ];
+
+
+        confetti.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+
+        confetti.style.animationDelay =
+            Math.random() * .6 + "s";
+
+
+        confetti.style.fontSize =
+            10 +
+            Math.random() * 18 +
+            "px";
+
+
+        document.body.appendChild(confetti);
+
+
+        setTimeout(function() {
+
+            confetti.remove();
+
+        }, 3500);
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
